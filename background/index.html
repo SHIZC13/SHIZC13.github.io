@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>排序可视化</title>
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|IBM+Plex+Sans:600" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="../js/scrollreveal.js"></script>
+</head>
+<body class="is-boxed has-animations">
+    <div class="body-wrap boxed-container">
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0">
+                            <a href="#">
+								<img class="header-logo-image asset-light" src="dist/images/logo-light.svg" alt="Logo">
+								<img class="header-logo-image asset-dark" src="dist/images/logo-dark.svg" alt="Logo">
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-inner">
+						<div class="hero-copy">
+	                        <h1 class="hero-title mt-0">排序可视化</h1>
+	                        <p class="hero-paragraph">实现九种排序算法的可视化，比较每种排序的时间复杂度,比较次数,移动次数的统计，然后根据性能，找出每种算法所适应的情况及在现实生活中的应用与价值。</p>
+	                        <div class="hero-cta">
+	                        
+								<button onclick="data(len)" class="button button-primary" >数据生成</button>
+								<div class="lights-toggle">
+									<input id="lights-toggle" type="checkbox" name="lights-toggle" class="switch" checked="checked">
+									<label for="lights-toggle" class="text-xs"><span>调 <span class="label-text">dark</span></span></label>
+								</div>
+							</div>
+						</div>
+						<div class="hero-media">
+							<div class="header-illustration">
+								<img class="header-illustration-image asset-light" src="dist/images/header-illustration-light.svg" alt="Header illustration">
+								<img class="header-illustration-image asset-dark" src="dist/images/header-illustration-dark.svg" alt="Header illustration">
+							</div>
+							<div class="hero-media-illustration">
+							
+								<img class="hero-media-illustration-image asset-light" src="dist/images/hero-media-illustration-light.svg" alt="Hero media illustration">
+								<img class="hero-media-illustration-image asset-dark" src="dist/images/hero-media-illustration-dark.svg" alt="Hero media illustration">
+									<div style = "position:absolute;left:-450px;top:150px;width:500px;height:150px" class="hero-media-illustration-image asset-light">
+										<a href="../quickSort.html">
+										   <button style="width:140px;height:35px;">快速排序</button>
+										</a>
+										<a href="../bubble.html" >
+										    <button style="width:140px;height:35px;">冒泡排序</button>
+										</a>
+										<a href="../cocktailSort.html" >
+										    <button style="width:140px;height:35px;">鸡尾酒排序</button>
+										</a>
+										<br>
+										<a href="../combSort.html" >
+										    <button style="width:140px;height:35px;">梳排序</button>
+										</a>
+										
+										<a href="../shellSort.html" >
+										    <button style="width:140px;height:35px;">希尔排序</button>
+										</a>
+										<a href="../insertionSort.html" >
+										    <button style="width:140px;height:35px;">插入排序</button>
+										</a>
+										<br>
+										<a href="../selectionSort.html" >
+										    <button style="width:140px;height:35px;">选择排序</button>
+										</a>
+										<a href="../heapSort.html">
+										    <button style="width:140px;height:35px;">堆排序</button>
+										</a>
+										<a href="../mergeSort.html" >
+										    <button style="width:140px;height:35px;">归并排序</button>
+										</a>
+										
+										<br>
+										排序序列种类:
+										<select id="mySelect" onchange = "data(len)">
+											<option>随机序列</option>
+											<option>独特性质序列</option>
+											<option>倒叙序列</option>
+											<option>大部分有序序列</option>
+										</select>
+										<br>
+									</div> 
+									<div style = "position:absolute;left:-450px;top:150px;width:500px;height:150px" class="hero-media-illustration-image asset-dark"">
+										<a href="../quickSort.html">
+										   <button style="width:140px;height:35px;">快速排序</button>
+										</a>
+										<a href="../bubble.html" >
+										    <button style="width:140px;height:35px;">冒泡排序</button>
+										</a>
+										<a href="../cocktailSort.html" >
+										    <button style="width:140px;height:35px;">鸡尾酒排序</button>
+										</a>
+										<br>
+										<a href="../combSort.html" >
+										    <button style="width:140px;height:35px;">梳排序</button>
+										</a>
+										
+										<a href="../shellSort.html" >
+										    <button style="width:140px;height:35px;">希尔排序</button>
+										</a>
+										<a href="../insertionSort.html" >
+										    <button style="width:140px;height:35px;">插入排序</button>
+										</a>
+										<br>
+										<a href="../selectionSort.html" >
+										    <button style="width:140px;height:35px;">选择排序</button>
+										</a>
+										<a href="../heapSort.html">
+										    <button style="width:140px;height:35px;">堆排序</button>
+										</a>
+										<a href="../mergeSort.html" >
+										    <button style="width:140px;height:35px;">归并排序</button>
+										</a>
+										<br>
+										排序序列种类:
+										<select id="mySelect" onchange = "data(60)">
+											<option>随机序列</option>
+											<option>独特性质序列</option>
+											<option>倒叙序列</option>
+											<option>大部分有序序列</option>
+										</select>
+										<br>
+									</div> 
+							</div>
+							<div class="hero-media-container">
+							</div>
+						</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="dist/js/main.min.js"></script>
+    <script type="text/javascript" src="../js/data.js"></script>
+</body>
+</html>

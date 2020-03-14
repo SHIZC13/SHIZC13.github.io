@@ -1,0 +1,17 @@
+@charset "UTF-8";
+body{
+    margin: 0;
+    padding: 0;
+    background: #F6F6F6;
+}
+
+.div1 {
+    margin: 10px;
+    width: 700px;
+}
+
+#cvs {
+    background: #FFF;
+    box-shadow: 0px 0px 1px 1px #555555;
+    margin: 10px;
+}

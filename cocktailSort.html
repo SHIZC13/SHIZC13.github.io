@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>鸡尾酒排序</title>
+</head>
+<body>
+
+<div >
+	 <canvas id="cvs" width="1100" height="500"></canvas>
+	 <br>
+	 <button onclick="start()">开始</button>
+</div>
+<div>
+	<form style="display:block;position:absolute;top:200px;left:1100px;width:200px;height:200px;">
+	 	比较次数: <input type="text" value="" id="compare"><br>
+	 	移动次数: <input type="text" value="" id="move"><br>
+	 	花费时间: <input type="text" value="" id="time">
+	 	<br>
+	排序优化：  
+	<select>
+		<option>无</option>
+	</select><br>
+		动画速度：<br>
+		<input type="range"  max="100" min="10" value="10" id="range" />
+	</form>
+	
+</div>
+	<script type="text/javascript" src="js/cocktailSort.js"></script>
+
+</body>
+</html>
