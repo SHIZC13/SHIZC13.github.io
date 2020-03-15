@@ -34,9 +34,8 @@
 	                        <h1 class="hero-title mt-0">排序可视化</h1>
 	                        <p class="hero-paragraph">实现九种排序算法的可视化，比较每种排序的时间复杂度,比较次数,移动次数的统计，然后根据性能，找出每种算法所适应的情况及在现实生活中的应用与价值。</p>
 	                        <div class="hero-cta">
-	                        
-								<button onclick="data(len)" class="button button-primary" >数据生成</button>
 								<div class="lights-toggle">
+								<button onclick="data(len)" class="button button-primary" >数据生成</button>
 									<input id="lights-toggle" type="checkbox" name="lights-toggle" class="switch" checked="checked">
 									<label for="lights-toggle" class="text-xs"><span>调 <span class="label-text">dark</span></span></label>
 								</div>
@@ -48,10 +47,7 @@
 								<img class="header-illustration-image asset-dark" src="dist/images/header-illustration-dark.svg" alt="Header illustration">
 							</div>
 							<div class="hero-media-illustration">
-							
-								<img class="hero-media-illustration-image asset-light" src="dist/images/hero-media-illustration-light.svg" alt="Hero media illustration">
-								<img class="hero-media-illustration-image asset-dark" src="dist/images/hero-media-illustration-dark.svg" alt="Hero media illustration">
-									<div style = "position:absolute;left:-450px;top:150px;width:500px;height:150px" class="hero-media-illustration-image asset-light">
+								<div class="hero-table sit-table asset-light" >
 										<a href="../quickSort.html">
 										   <button style="width:140px;height:35px;">快速排序</button>
 										</a>
@@ -93,7 +89,7 @@
 										</select>
 										<br>
 									</div> 
-									<div style = "position:absolute;left:-450px;top:150px;width:500px;height:150px" class="hero-media-illustration-image asset-dark"">
+									<div class="hero-table sit-table asset-dark" >
 										<a href="../quickSort.html">
 										   <button style="width:140px;height:35px;">快速排序</button>
 										</a>
@@ -124,9 +120,10 @@
 										<a href="../mergeSort.html" >
 										    <button style="width:140px;height:35px;">归并排序</button>
 										</a>
+										
 										<br>
 										排序序列种类:
-										<select id="mySelect" onchange = "data(60)">
+										<select id="mySelect" onchange = "data(len)">
 											<option>随机序列</option>
 											<option>独特性质序列</option>
 											<option>倒叙序列</option>
@@ -134,6 +131,10 @@
 										</select>
 										<br>
 									</div> 
+								<img class="hero-media-illustration-image asset-light" src="dist/images/hero-media-illustration-light.svg" alt="Hero media illustration">
+								<img class="hero-media-illustration-image asset-dark" src="dist/images/hero-media-illustration-dark.svg" alt="Hero media illustration">
+									
+									
 							</div>
 							<div class="hero-media-container">
 							</div>
