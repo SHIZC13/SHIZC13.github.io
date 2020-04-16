@@ -42,13 +42,18 @@
  	function less(len)
  	{
  		var list =new  Array(len);
- 		for (let i = 0; i < len / 2; i++) {
-			list[i] = i + 1;
+ 		for(let i = 0;i < len;i++)
+		{
+		list[i] = i +1;
 		}
-		for (let i = len / 2; i < len; i++) {
-			list[i] = i + 2;
+ 	 	for(let i = 0;i < 5;i++)
+		{
+			var index = Math.floor(Math.random() * list.length);//随机取0~lists.length-1的随机数
+			var seed = Math.floor(Math.random() * list.length);//随机取0~lists.length-1的随机数
+			var temp = list[i+seed];
+			list[i+seed] = list[index*seed %len];
+			list[index*seed %len] = temp;
 		}
-		list[len - 1] = len / 2 + 1;
 		return list;
  	}
  	

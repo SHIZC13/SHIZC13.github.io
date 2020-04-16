@@ -69,7 +69,6 @@
         index ++;
     }
 
-    var num = 0;//全局计数器
     function merge(items,low,mid,hi) {
     	var temp = new Array(hi - low + 1);
     	var i = 0,p1 = low,p2 = mid+1;
@@ -156,7 +155,7 @@
     	}
 /*    	if(hi - low <= 4)//短序列使用插入排序可以减少递归深度与增加运算速度
     		{
-    		insertionSort(items,low, hi)
+    		insertionSort(items,low, hi)//插入排序
     		return;
     		}*/
     	var mid=low + Math.floor((hi - low)/2);

@@ -85,7 +85,6 @@
         }
         //大顶堆
         function buildMaxHeap(arr) {
-        	
             for (let i = Math.floor(arr.length / 2) - 1; i >= 0; i--) {
                 heapify(arr, i, arr.length);
             }

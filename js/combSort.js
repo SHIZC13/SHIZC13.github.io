@@ -75,7 +75,6 @@
     }
     //梳排序
     function combSort(arr){
-    	var num = 0;//比较计数器
     	var iteration_count = 0;//迭代计数器
     	var gap = arr.length;
     	var decrease_factor = 1.3;//递减率
@@ -83,8 +82,7 @@
     	      // 如果不是第一个间隙
     	      if (iteration_count > 0)
     	      // 计算间隙
-    	          gap = (gap == 1) ? gap : Math.floor(gap / decrease_factor);
-    	 
+    	          gap = (gap == 1) ? gap : Math.floor(gap / decrease_factor); 
     	      // 设置前后元素并按间隙递增
     	      var front = 0;
     	      var back = gap;
@@ -102,7 +100,6 @@
     	      }
     	      iteration_count += 1;//迭代计数器加一
     	  }
-    	return num;
     }
     
     
@@ -111,7 +108,7 @@
         var arr = cpy(lists);   //复制数组，下次可以重新开始动画
         index = 0;              //初始化延时计数
         var beginTime = +new Date();
-        num = combSort( arr);    //执行梳排序
+        combSort( arr);    //执行梳排序
         var endTime = +new Date();
         document.getElementById("compare").value = cmpl_num + "次";
         document.getElementById("move").value = move_num + "次";

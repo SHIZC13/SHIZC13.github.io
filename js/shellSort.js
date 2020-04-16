@@ -61,8 +61,8 @@
         }, index * 1000/change());
         index ++;
     }
-    // 希尔排序
     
+    // 希尔排序
     function shellSort(items){
     var len = items.length;
     for (var gap = Math.floor(len / 2); gap > 0; gap = Math.floor(gap / 2)) {//外层控制步长

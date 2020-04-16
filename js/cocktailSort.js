@@ -70,27 +70,23 @@ function cocktailSort(items) {
         j = 0;
     while (min_pos < max_pos) 
     {
-    	
-        for (j = max_pos; j > min_pos; --j) {
-        	move_num++;
+        for (j = max_pos; j > min_pos; --j) {//倒着找找最小值
             if (items[j-1] > items[j]) {
-            	swap(items,j-1,j);
-            	cmpl_num +=2;
-            	mov = j;
-                // 解构赋值，交换变量值
+            	swap(items,j-1,j);  // 解构赋值，交换变量值
+            	cmpl_num++;
+            	move_num += 3;
+            	mov = j; //记录交换位置  
             }
         }
-        min_pos = mov;
-    	
-        
-        for (j = min_pos; j < max_pos; ++j) 
+        min_pos = mov;//从上次位置
+        for (j = min_pos; j < max_pos; ++j) //正着找找最大值
         {
-        	move_num++;
             if (items[j] > items[j+1]) {
-            	swap(items,j,j+1);
-            	cmpl_num +=2;
+            	swap(items,j,j+1);  // 解构赋值，交换变量值
+            	cmpl_num ++;
+            	move_num +=3;
             	mov = j;
-                // 解构赋值，交换变量值
+                
             }
         }
         max_pos = mov;
@@ -102,7 +98,7 @@ function start(){
     var arr = cpy(lists);   //复制数组，下次可以重新开始动画
     index = 0;              //初始化延时计数
     var beginTime = +new Date();
-    num = cocktailSort( arr);    //执行希尔排序
+    cocktailSort( arr);    //执行鸡尾酒排序
     var endTime = +new Date();
     document.getElementById("compare").value = cmpl_num + "次";
     document.getElementById("move").value = move_num + "次";

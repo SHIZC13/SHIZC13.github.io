@@ -113,11 +113,11 @@
             j = right;
         while (i <= j) {//代表没有结束
             while (items[i] < pivot) {
-                i++;
+                i++;//向左移动
                 cmpl_num++;
             }
             while (items[j] > pivot) {
-                j--;
+                j--;//向右移动
                 cmpl_num++;
             }
             if (i <= j) {
@@ -138,11 +138,9 @@
                 opt_quickSort(items, left, index - 1);
             }
             if (index < right) {
-            	opt_quickSort(items, index, right);
-                
+            	opt_quickSort(items, index, right); 
             }
         }
-       
     }
     
     
